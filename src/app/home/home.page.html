@@ -11,6 +11,8 @@
     <ion-item *ngFor="let contact of contacts" (click)="showData(contact)">
       <h2>{{contact.name}}</h2> 
       <p>{{contact.phone}}</p>
+      <!-- <ion-button href="/Detail">View Data</ion-button> -->
+      <ion-button (click)="goToPage()">View Data</ion-button>
     </ion-item>
   </ion-list>
 </ion-content>

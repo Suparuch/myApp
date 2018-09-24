@@ -1,5 +1,8 @@
+import { Router } from '@angular/router';
+import { DetailPage } from './../detail/detail.page';
 import { Component } from '@angular/core';
 import { NavController, NavParams } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-home',
@@ -14,9 +17,14 @@ export class HomePage {
     {name: 'PUN', phone: '0940044244'}
   ];
 
-  constructor(public navCtrl: NavController) {
+  constructor(private router: Router) {
   }
 
   showData(contact) {
+  }
+
+  goToPage() {
+    // this.router.navigate(['Detail']);
+    this.router.navigateByUrl('/Detail');
   }
 }
